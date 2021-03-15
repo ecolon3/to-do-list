@@ -1,2 +1,4 @@
 # to-do-list
-First project
+Project
+
+This project will follow the tutorial at https://freshman.tech/todo-list/.
