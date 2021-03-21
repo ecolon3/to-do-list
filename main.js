@@ -10,6 +10,7 @@ const filterOption = document.querySelector('.filter_todo');
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
+filterOption.addEventListener('change', filterTodo);
 
 // adding tasks for the check and delete buttons
 
@@ -56,29 +57,29 @@ function deleteCheck(e) {
   //COMPLETE ITEM
   if (item.classList[0] === "complete_btn") {
       const todo = item.parentElement;
-      todo.classList.toggle('completedItem');
+      todo.classList.toggle("completedItem");
   }
 }
 // FILTERING THE TASKS ACCORDING TO THE OPTION
 function filterTodo(e) {
     const todos = todoList.childNodes;
-    for (var i = 1; i <todos.length; i++) {
+    for (let i = 0; i < todos.length; i++) {
         switch(e.target.value) {
-            case 'all':
-                todos[i].style.display = 'flex';
+            case "all":
+                todos[i].style.display = "flex";
                 break;
-            case 'completed':
-                if (todos[i].classList.contains('completedItem')) {
-                    todos[i].style.display = 'flex';
+            case "completed":
+                if (todos[i].classList.contains("completedItem")) {
+                    todos[i].style.display = "flex";
                 } else {
-                    todos[i].style.display = 'none';
+                    todos[i].style.display = "none";
                 }
                 break;
-            case 'uncompleted': 
-                if (!todos[i].classList.contains('completedItem')) {
-                    todos[i].style.display = 'flex';
+            case "uncompleted": 
+                if (!todos[i].classList.contains("completedItem")) {
+                    todos[i].style.display = "flex";
                 } else {
-                    todos[i].style.display = 'none';
+                    todos[i].style.display = "none";
                 }
                 break;
         }
