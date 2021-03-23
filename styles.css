@@ -32,6 +32,8 @@ form button{
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 1.6em;  
+    height: 1.6em;
 }
 form button:hover{
     background: #c065c0;
@@ -54,7 +56,8 @@ select{
     color: #c065c0;
     width: 8rem;
     cursor: pointer;
-    padding: 0.7rem;
+    padding: 0.7rem;    
+    height: 3.1em;
 }
 .select::after{
     content: "\25bc";
