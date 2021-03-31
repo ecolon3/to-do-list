@@ -5,38 +5,46 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* ADDING BACKGROUND COLOR, FONT  FAMILY, FOREGROUND COLOR AND MINIMUN HEIGHT TO OUR PAGE  */
+/* ADDING BACKGROUND COLOR, FONT  FAMILY, FOREGROUND COLOR AND MINIMUM HEIGHT TO OUR PAGE  */
 body{
-    background-image: linear-gradient(120deg, #5f57d1, #c065c0);
-    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(120deg, #152e1b, #8ef3a8);
+    font-family: 'Architects Daughter', sans-serif;
     color: white;
     min-height: 100vh;
 }
 
-/* STYLYING INPUT ELEMENT AND THE BUTTON */
+/* STYLING INPUT ELEMENT AND THE BUTTON */
 header,form{
     display: flex;
     min-height: 15vh;
     justify-content: center;
     align-items: center;    
 }
-form input, form button{
+form input {
     padding: 0.4rem;
     border: none;
-    color: #47187c;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #114728;
     font-size: 1.6rem;
     background: white;
+    height: 1.9em;
 }
 form button{
-    color: #c065c0;
+    padding: 0.4rem;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #114728;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 1.6em;  
-    height: 1.6em;
+    font-size: 1.6rem;
+    width: 1.9em;  
+    height: 1.9em;
 }
 form button:hover{
-    background: #c065c0;
+    background:#114728;
     color: white;
 }
 /* STYLING DROPDOWN */
@@ -46,6 +54,7 @@ select{
     appearance: none;
     outline: none;
     border: none;
+    border-radius: 5px;
 }
 .select{
     margin: 1rem;
@@ -53,22 +62,30 @@ select{
     overflow: hidden;
 }
 select{
-    color: #47187c;
-    width: 8rem;
+    color: #114728;
+    width: 7.5rem;
     cursor: pointer;
-    padding: 0.7rem;    
-    height: 3.1em;
+    padding-right: 0.2rem;
+    padding-left: 0.7rem; 
+    padding-top: 0.2rem;   
+    height: 3.0em;
+    font-size: 1rem;
+    font-style: bold;
 }
 .select::after{
     content: "\25bc";
     position: absolute;
-    color: #c065c0;
+    color: #114728;
     top: 7px;
     right: 6px;
     pointer-events: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.7rem;
+    padding-right: 0.4rem;
 }
 .select:hover::after{
-   color: #583429;
+   color: #114728;
 }
 
 /* STYLING CONTAINER WHERE THE TASKS ARE SHOWN */
@@ -85,7 +102,7 @@ select{
 .todo{
     margin: 5px auto;
     background: rgb(255, 255, 255);
-    color: #47187c;
+    color: #114728;
     display: flex;
     font-size: 1.2rem;
     padding: 0.3rem;
@@ -102,7 +119,7 @@ select{
 .complete_btn, 
 .delete_btn{
     padding: 0.5rem;
-    background: #6f5592;
+    background: #114728;
     color: white;
     border: none;
     margin-left: 0.2rem;
@@ -111,14 +128,14 @@ select{
 }
 
 .complete_btn{
-    background: #c065c0;;
+    background: #114728;;
 }
 .complete_btn:active{
-    background: #c065c0;;
+    background: #114728;
 }
 
 .delete_btn:active{
-    background: #6b558f;
+    background: #114728;
 }
 
 .fa-trash,

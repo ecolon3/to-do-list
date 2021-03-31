@@ -5,12 +5,14 @@ const todoInput = document.querySelector('.todo_input');
 const todoButton = document.querySelector('.todo_button');
 const todoList = document.querySelector('.todo_list');
 const filterOption = document.querySelector('.filter_todo');
+const deleteToDo = document.querySelector('.delete_btn')
 
 // listening for click events
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
 filterOption.addEventListener('change', filterTodo);
+deleteToDo.addEventListener('click', filterTodo);
 
 // adding tasks for the check and delete buttons
 
@@ -53,7 +55,12 @@ function deleteCheck(e) {
         todo.addEventListener('transitioned', function (){
             todo.remove();
         })
+        const todos = todoList.childNodes;
+        for (let i = 0; i < todos.length; i++) {
+            todos[i].style.display = "flex";
+        }
     }
+
   //COMPLETE ITEM
   if (item.classList[0] === "complete_btn") {
       const todo = item.parentElement;
